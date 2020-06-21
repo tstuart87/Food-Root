@@ -1,0 +1,15 @@
+C:\Users\stuar\source\repos\FoodRoot.Models\bin\Release\FoodRoot.Models.dll
+C:\Users\stuar\source\repos\FoodRoot.Models\bin\Release\FoodRoot.Models.pdb
+C:\Users\stuar\source\repos\FoodRoot.Models\bin\Release\FoodRoot.Data.dll
+C:\Users\stuar\source\repos\FoodRoot.Models\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\stuar\source\repos\FoodRoot.Models\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\stuar\source\repos\FoodRoot.Models\bin\Release\EntityFramework.dll
+C:\Users\stuar\source\repos\FoodRoot.Models\bin\Release\FoodRoot.Data.pdb
+C:\Users\stuar\source\repos\FoodRoot.Models\bin\Release\FoodRoot.Data.dll.config
+C:\Users\stuar\source\repos\FoodRoot.Models\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\stuar\source\repos\FoodRoot.Models\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Users\stuar\source\repos\FoodRoot.Models\bin\Release\EntityFramework.xml
+C:\Users\stuar\source\repos\FoodRoot.Models\obj\Release\FoodRoot.Models.csprojAssemblyReference.cache
+C:\Users\stuar\source\repos\FoodRoot.Models\obj\Release\FoodRoot.Models.csproj.CopyComplete
+C:\Users\stuar\source\repos\FoodRoot.Models\obj\Release\FoodRoot.Models.dll
+C:\Users\stuar\source\repos\FoodRoot.Models\obj\Release\FoodRoot.Models.pdb

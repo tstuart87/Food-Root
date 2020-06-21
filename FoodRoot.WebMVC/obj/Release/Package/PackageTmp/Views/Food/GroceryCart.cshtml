@@ -1,0 +1,73 @@
+﻿@model IEnumerable<FoodRoot.Models.FoodListItem>
+
+@{
+    ViewBag.Title = "GroceryCart";
+}
+
+<div id="top" class="topper">
+    <table width="100%" class="topper">
+        <tr width="100%" class="topper">
+            <th width="100%" class="topper">
+                Grocery Cart
+            </th>
+        </tr>
+    </table>
+</div>
+
+
+<table class="table">
+    <tr>
+        <th width="25%" class="farLeft">
+
+        </th>
+
+        <th width="50%" class="listFoodType">
+
+        </th>
+
+        <th width="25%" class="alignRight farRight">
+            <img class="addRemoveButton" src="~/Content/FoodRootPics/cart.PNG">
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="spacer">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr class="tableRow">
+            <td colspan="2" class="farLeft">
+                @Html.DisplayFor(modelItem => item.FoodName)
+            </td>
+
+            <td colspan="1" class="alignRight farRight">
+                @if (item.IsOnList == true)
+                {
+                    <a href="@Url.Action("RemoveFromListInTheCart", "Food", new { foodType = ViewBag.FoodType, foodId = item.FoodId })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/check.PNG">
+                    </a>
+                }
+                else
+                {
+
+                }
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div class="upButton">
+    <a href="#top">
+        <img class="upButton" src="~/Content/FoodRootPics/upArrow.PNG">
+    </a>
+</div>
+
+<div width="100%" class="footer">
+    <a class="footer" href="@Url.Action("Index", "Home")">
+        FINISHED SHOPPING
+    </a>
+</div>

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodRoot.WebMVC", "FoodRoot.WebMVC.csproj", "{35A46C7F-09FC-42A8-8D52-B17F4CE06181}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodRoot.Contracts", "..\FoodRoot.Contracts\FoodRoot.Contracts.csproj", "{091284D0-B039-4765-BD90-D8DF09374521}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodRoot.Data", "..\FoodRoot.Data\FoodRoot.Data.csproj", "{6E9A9B7C-56E6-48A9-A751-D776E939A087}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodRoot.Models", "..\FoodRoot.Models\FoodRoot.Models.csproj", "{E1F1F093-3A6B-481D-94FF-3EACC9DC9F21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodRoot.Services", "..\FoodRoot.Services\FoodRoot.Services.csproj", "{A549A8E8-E375-4A83-AE23-CEC281F1707C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodRoot.Tests", "..\FoodRoot.Tests\FoodRoot.Tests.csproj", "{0C74F42E-E430-4230-9375-A92E5050D7CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35A46C7F-09FC-42A8-8D52-B17F4CE06181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A46C7F-09FC-42A8-8D52-B17F4CE06181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A46C7F-09FC-42A8-8D52-B17F4CE06181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A46C7F-09FC-42A8-8D52-B17F4CE06181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{091284D0-B039-4765-BD90-D8DF09374521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{091284D0-B039-4765-BD90-D8DF09374521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{091284D0-B039-4765-BD90-D8DF09374521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{091284D0-B039-4765-BD90-D8DF09374521}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E9A9B7C-56E6-48A9-A751-D776E939A087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9A9B7C-56E6-48A9-A751-D776E939A087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9A9B7C-56E6-48A9-A751-D776E939A087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9A9B7C-56E6-48A9-A751-D776E939A087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F1F093-3A6B-481D-94FF-3EACC9DC9F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F1F093-3A6B-481D-94FF-3EACC9DC9F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F1F093-3A6B-481D-94FF-3EACC9DC9F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F1F093-3A6B-481D-94FF-3EACC9DC9F21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A549A8E8-E375-4A83-AE23-CEC281F1707C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A549A8E8-E375-4A83-AE23-CEC281F1707C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A549A8E8-E375-4A83-AE23-CEC281F1707C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A549A8E8-E375-4A83-AE23-CEC281F1707C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C74F42E-E430-4230-9375-A92E5050D7CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C74F42E-E430-4230-9375-A92E5050D7CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C74F42E-E430-4230-9375-A92E5050D7CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C74F42E-E430-4230-9375-A92E5050D7CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5DF4595-5E62-48A0-837F-9A2AC8041EF5}
+	EndGlobalSection
+EndGlobal

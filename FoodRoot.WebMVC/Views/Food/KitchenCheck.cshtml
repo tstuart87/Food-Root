@@ -1,0 +1,390 @@
+﻿@model IEnumerable<FoodRoot.Models.FoodListItem>
+
+@{
+    ViewBag.Title = "KitchenCheck";
+}
+
+<div id="top" class="topper">
+    <table width="100%" class="topper">
+        <tr width="100%" class="topper">
+            <th width="100%" class="topper">
+                Kitchen Check
+            </th>
+        </tr>
+    </table>
+</div>
+
+
+<table class="table">
+    <tr>
+        @switch (ViewBag.FoodType)
+        {
+            case "beverages":
+                <th width="25%" class="farLeft">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "toiletries" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/left.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "toiletries" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/toiletries.PNG">
+                    </a>
+                </th>
+
+                <th width="50%" class="listFoodType">
+                    BEVERAGES
+                </th>
+
+                <th width="25%" class="alignRight farRight">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "breadsAndPastas" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/breadAndPasta.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "breadsAndPastas" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/right.PNG">
+                    </a>
+                </th>
+                break;
+
+            case "breadsAndPastas":
+                <th width="25%" class="farLeft">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "beverages" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/left.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "beverages" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/beverages.PNG">
+                    </a>
+                </th>
+
+                <th width="50%" class="listFoodType">
+                    BREAD / PASTA
+                </th>
+
+                <th width="25%" class="alignRight farRight">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "cannedGoods" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/cannedGoods.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "cannedGoods" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/right.PNG">
+                    </a>
+                </th>
+                break;
+            case "cannedGoods":
+                <th width="25%" class="farLeft">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "breadsAndPastas" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/left.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "breadsAndPastas" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/breadAndPasta.PNG">
+                    </a>
+                </th>
+
+                <th width="50%" class="listFoodType">
+                    CANNED GOODS
+                </th>
+
+                <th width="25%" class="alignRight farRight">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "cleaningSupplies" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/cleaningSupplies.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "cleaningSupplies" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/right.PNG">
+                    </a>
+                </th>
+                break;
+            case "cleaningSupplies":
+                <th width="25%" class="farLeft">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "cannedGoods" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/left.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "cannedGoods" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/cannedGoods.PNG">
+                    </a>
+                </th>
+
+                <th width="50%" class="listFoodType">
+                    CLEANING SUPPLIES
+                </th>
+
+                <th width="25%" class="alignRight farRight">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "condiments" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/condiments.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "condiments" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/right.PNG">
+                    </a>
+                </th>
+                break;
+            case "condiments":
+                <th width="25%" class="farLeft">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "cleaningSupplies" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/left.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "cleaningSupplies" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/cleaningSupplies.PNG">
+                    </a>
+                </th>
+
+                <th width="50%" class="listFoodType">
+                    CONDIMENTS
+                </th>
+
+                <th width="25%" class="alignRight farRight">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "dairyAndEggs" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/dairyAndEggs.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "dairyAndEggs" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/right.PNG">
+                    </a>
+                </th>
+                break;
+            case "dairyAndEggs":
+                <th width="25%" class="farLeft">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "condiments" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/left.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "condiments" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/condiments.PNG">
+                    </a>
+                </th>
+
+                <th width="50%" class="listFoodType">
+                    DAIRY / EGGS
+                </th>
+
+                <th width="25%" class="alignRight farRight">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "frozenFoods" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/frozenFood.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "frozenFoods" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/right.PNG">
+                    </a>
+                </th>
+                break;
+            case "frozenFoods":
+                <th width="25%" class="farLeft">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "dairyAndEggs" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/left.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "dairyAndEggs" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/dairyAndEggs.PNG">
+                    </a>
+                </th>
+
+                <th width="50%" class="listFoodType">
+                    FROZEN FOOD
+                </th>
+
+                <th width="25%" class="alignRight farRight">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "meats" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/meats.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "meats" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/right.PNG">
+                    </a>
+                </th>
+                break;
+            case "meats":
+                <th width="25%" class="farLeft">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "frozenFoods" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/left.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "frozenFoods" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/frozenFood.PNG">
+                    </a>
+                </th>
+
+                <th width="50%" class="listFoodType">
+                    MEATS
+                </th>
+
+                <th width="25%" class="alignRight farRight">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "pharmaceuticals" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/pharmacy.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "pharmaceuticals" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/right.PNG">
+                    </a>
+                </th>
+                break;
+            case "pharmaceuticals":
+                <th width="25%" class="farLeft">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "meats" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/left.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "meats" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/meats.PNG">
+                    </a>
+                </th>
+
+                <th width="50%" class="listFoodType">
+                    PHARMACY
+                </th>
+
+                <th width="25%" class="alignRight farRight">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "produce" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/produce.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "produce" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/right.PNG">
+                    </a>
+                </th>
+                break;
+            case "produce":
+                <th width="25%" class="farLeft">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "pharmaceuticals" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/left.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "pharmaceuticals" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/pharmacy.PNG">
+                    </a>
+                </th>
+
+                <th width="50%" class="listFoodType">
+                    PRODUCE
+                </th>
+
+                <th width="25%" class="alignRight farRight">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "snacks" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/snacks.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "snacks" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/right.PNG">
+                    </a>
+                </th>
+                break;
+            case "snacks":
+                <th width="25%" class="farLeft">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "produce" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/left.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "produce" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/produce.PNG">
+                    </a>
+                </th>
+
+                <th width="50%" class="listFoodType">
+                    SNACKS
+                </th>
+
+                <th width="25%" class="alignRight farRight">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "spices" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/spices.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "spices" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/right.PNG">
+                    </a>
+                </th>
+                break;
+            case "spices":
+                <th width="25%" class="farLeft">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "snacks" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/left.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "snacks" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/snacks.PNG">
+                    </a>
+                </th>
+
+                <th width="50%" class="listFoodType">
+                    SPICES
+                </th>
+
+                <th width="25%" class="alignRight farRight">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "toiletries" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/toiletries.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "toiletries" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/right.PNG">
+                    </a>
+                </th>
+                break;
+            case "toiletries":
+                <th width="25%" class="farLeft">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "spices" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/left.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "spices" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/spices.PNG">
+                    </a>
+                </th>
+
+                <th width="50%" class="listFoodType">
+                    TOILETRIES
+                </th>
+
+                <th width="25%" class="alignRight farRight">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "beverages" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/beverages.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "beverages" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/right.PNG">
+                    </a>
+                </th>
+                break;
+
+            default:
+                <th width="25%" class="farLeft">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "toiletries" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/left.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "toiletries" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/toiletries.PNG">
+                    </a>
+                </th>
+
+                <th width="50%" class="listFoodType">
+                    BEVERAGES
+                </th>
+
+                <th width="25%" class="alignRight farRight">
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "breadsAndPastas" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/breadAndPasta.PNG">
+                    </a>
+                    <a href="@Url.Action("KitchenCheck", "Food", new { foodType = "breadsAndPastas" })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/right.PNG">
+                    </a>
+                </th>
+                break;
+        }
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="spacer">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr class="tableRow">
+            <td colspan="2" class="farLeft">
+                @Html.DisplayFor(modelItem => item.FoodName)
+            </td>
+
+            <td colspan="1" class="alignRight farRight">
+                @if (item.IsOnList == false)
+                {
+                    @*<a href="@Url.Action("AddToList", "Food", new { foodType = ViewBag.FoodType, foodId = item.FoodId })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/add.PNG">
+                    </a>*@
+                }
+                else
+                {
+                    <a href="@Url.Action("RemoveFromKitchenCheck", "Food", new { foodType = ViewBag.FoodType, foodId = item.FoodId })">
+                        <img class="addRemoveButton" src="~/Content/FoodRootPics/remove.PNG">
+                    </a>
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+<div class="upButton">
+    <a href="#top">
+        <img class="upButton" src="~/Content/FoodRootPics/upArrow.PNG">
+    </a>
+</div>
+
+<div width="100%" class="footer">
+    <a class="footer" href="@Url.Action("GroceryCart", "Food")">
+        START SHOPPING
+    </a>
+</div>

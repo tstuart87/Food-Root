@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div class="homePage">
+        @using (Html.BeginForm("ListBuilder", "Food"))
+        {
+            <button class="homeButton" type="submit"><img class="homeButton01" src="~/Content/FoodRootPics/continue.PNG" alt="KRNL"></button>
+        }
+
+        <a href="@Url.Action("StartNewShoppingList", "Food")">
+            <img class="homeButton02" src="~/Content/FoodRootPics/newShoppingList.PNG">
+        </a>
+    </div>

@@ -1,0 +1,5 @@
+C:\Users\stuar\source\repos\FoodRoot.Tests\bin\Debug\FoodRoot.Tests.dll
+C:\Users\stuar\source\repos\FoodRoot.Tests\bin\Debug\FoodRoot.Tests.pdb
+C:\Users\stuar\source\repos\FoodRoot.Tests\obj\Debug\FoodRoot.Tests.dll
+C:\Users\stuar\source\repos\FoodRoot.Tests\obj\Debug\FoodRoot.Tests.pdb
+C:\Users\stuar\source\repos\FoodRoot.Tests\obj\Debug\FoodRoot.Tests.csprojAssemblyReference.cache

@@ -1,0 +1,5 @@
+C:\Users\stuar\source\repos\FoodRoot.Contracts\bin\Debug\FoodRoot.Contracts.dll
+C:\Users\stuar\source\repos\FoodRoot.Contracts\bin\Debug\FoodRoot.Contracts.pdb
+C:\Users\stuar\source\repos\FoodRoot.Contracts\obj\Debug\FoodRoot.Contracts.dll
+C:\Users\stuar\source\repos\FoodRoot.Contracts\obj\Debug\FoodRoot.Contracts.pdb
+C:\Users\stuar\source\repos\FoodRoot.Contracts\obj\Debug\FoodRoot.Contracts.csprojAssemblyReference.cache
